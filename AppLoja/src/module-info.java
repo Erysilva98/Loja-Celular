@@ -6,4 +6,5 @@
  *
  */
 module AppLoja {
+	requires java.desktop;
 }
