@@ -1,12 +1,17 @@
 package appLoja;
 
-import dao.FileUserDao;
-import view.UserForm;
+import javax.swing.SwingUtilities;
+
+import dao.Controller;
+import view.CelularView;
 
 public class Main {
     public static void main(String[] args) {
-        FileUserDao userDao = new FileUserDao();
-        UserForm userForm = new UserForm(userDao);
+        SwingUtilities.invokeLater( () -> {
+        	CelularView view = new CelularView();
+            Controller controller = new Controller(view);
+            controller.iniciar();
+        });
     }
 }
 
