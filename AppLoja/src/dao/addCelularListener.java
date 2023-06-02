@@ -13,7 +13,12 @@ public class addCelularListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		String marca = controller.getView().
+		String marca = controller.getView().getMarca();
+		String modelo = controller.getView().getModelo();
+		double preco = controller.getView().getPreco();
+		
+		controller.addCelular(marca, modelo, preco);
+		controller.getView().;
 		
 	}
 }

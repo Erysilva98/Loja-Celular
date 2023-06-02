@@ -1,9 +1,5 @@
 package dao;
 
-import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,26 +14,7 @@ public class Controller {
 	{
 		this.view = view;
 		this.celulares = new ArrayList<>();
-		view.set
 	}
-	
-	// Gets and Sets
-
-	public List<Celular> getCelulares() {
-		return celulares;
-	}
-
-	public void setCelulares(List<Celular> celulares) {
-		this.celulares = celulares;
-	}
-
-	public CelularView getView() {
-		return view;
-	}
-
-	public void setView(CelularView view) {
-		this.view = view;
-	}	
 	
 	// method
 	
@@ -46,13 +23,13 @@ public class Controller {
 		celulares.add(celular);
 	}
 	
-	public void exibirCelular() {
-		view.lojaCelular(celulares);
+	public void exibirCelular() 
+	{
+		view.listaCelular(celulares);
 	}
-	
-	public void iniciar() {
-		view.appLoja();
+
+	public void iniciar() 
+	{
+		view.exibir();
 	}
-	
-	
 }
