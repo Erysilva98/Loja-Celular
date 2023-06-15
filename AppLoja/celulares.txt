@@ -1,0 +1,2 @@
+S 20 FE,Samsung,2.0
+assa,ass,122222.0
