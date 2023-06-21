@@ -1,35 +1,42 @@
 package appLoja;
 
 public class Celular extends Produto {
-	private String sistemaOperacional;
-	
-	public Celular ( String marca, double preco, String sistemaOperacional){
-		super(marca,preco);
-		this.setSistemaOperacional(sistemaOperacional); 
-	}
+    private String modelo;
+    private String sistemaOperacional;
 
-	public String getSistemaOperacional() {
-		return sistemaOperacional;
-	}
+    public Celular(String marca, double preco, String modelo, String sistemaOperacional) {
+        super(marca, preco);
+        this.modelo = modelo;
+        this.sistemaOperacional = sistemaOperacional;
+    }
 
-	public void setSistemaOperacional(String sistemaOperacional) {
-		this.sistemaOperacional = sistemaOperacional;
-	}
-	
-	public void exibirDetalhes() {
-		System.out.println("Marca: " + getMarca());
-		System.out.println("Preço: R$" + getPreco());
-		System.out.println("Sistema Operacional: "+ sistemaOperacional);
-	}
+    public String getDescricao() {
+        return marca + " " + modelo + " - " + sistemaOperacional + " - R$" + preco;
+    }
 
-	private String getPreco() {
-		// TODO Stub de método gerado automaticamente
-		return null;
-	}
+    public String getModelo() {
+        return modelo;
+    }
 
-	private String getMarca() {
-		// TODO Stub de método gerado automaticamente
-		return null;
-	}
-	
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getSistemaOperacional() {
+        return sistemaOperacional;
+    }
+
+    public void setSistemaOperacional(String sistemaOperacional) {
+        this.sistemaOperacional = sistemaOperacional;
+    }
+
+    // Outros métodos específicos de Celular
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n" +
+                "Modelo: " + modelo + "\n" +
+                "Sistema Operacional: " + sistemaOperacional;
+    }
 }
+
