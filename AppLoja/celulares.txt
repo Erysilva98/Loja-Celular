@@ -1,1 +1,2 @@
-Celular,Samsung ,20000.0,S20Fe,Android
+Celular,Samsung ,1200.0,A30,Android
+Celular,Iphone,70000.0,A10,IoS

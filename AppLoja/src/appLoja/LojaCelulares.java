@@ -12,7 +12,7 @@ public class LojaCelulares extends JFrame {
     private JTextField modeloTextField;
     private JTextField sistemaTextField;
     private JTextField precoTextField;
-    private JTextArea listaTextArea;
+    private JPanel listaPanel;
 
     private ArrayList<Produto> listaProdutos;
 
@@ -27,7 +27,7 @@ public class LojaCelulares extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel painelCadastro = new JPanel();
-        painelCadastro.setLayout(new GridLayout(5, 2));
+        painelCadastro.setLayout(new GridLayout(8, 4));
 
         painelCadastro.add(new JLabel("Marca:"));
         marcaTextField = new JTextField();
@@ -61,10 +61,29 @@ public class LojaCelulares extends JFrame {
         });
         painelCadastro.add(listarButton);
 
+        JButton removerButton = new JButton("Remover");
+        removerButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                removerProduto();
+                listarProdutos();
+            }
+        });
+        painelCadastro.add(removerButton);
+
+        JButton editarButton = new JButton("Editar");
+        editarButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                editarProduto();
+                listarProdutos();
+            }
+        });
+        painelCadastro.add(editarButton);
+
         add(painelCadastro, BorderLayout.NORTH);
 
-        listaTextArea = new JTextArea();
-        add(new JScrollPane(listaTextArea), BorderLayout.CENTER);
+        listaPanel = new JPanel();
+        listaPanel.setLayout(new BoxLayout(listaPanel, BoxLayout.Y_AXIS));
+        add(new JScrollPane(listaPanel), BorderLayout.CENTER);
     }
 
     private void cadastrarProduto() {
@@ -105,7 +124,6 @@ public class LojaCelulares extends JFrame {
         }
     }
 
-
     private void carregarProdutos() {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("celulares.txt"));
@@ -128,9 +146,63 @@ public class LojaCelulares extends JFrame {
     }
 
     private void listarProdutos() {
-        listaTextArea.setText("");
+        listaPanel.removeAll();
         for (Produto produto : listaProdutos) {
-            listaTextArea.append(produto.getDescricao() + "\n");
+            JButton button = new JButton(produto.getDescricao());
+            button.setAlignmentX(Component.CENTER_ALIGNMENT);
+            button.addActionListener(new ActionListener() {
+                public void actionPerformed(ActionEvent e) {
+                    // Ação ao clicar em um produto
+                    JOptionPane.showMessageDialog(null, produto.getDescricao());
+                }
+            });
+            listaPanel.add(button);
+        }
+        listaPanel.revalidate();
+        listaPanel.repaint();
+    }
+
+    private void removerProduto() {
+        String produtoSelecionado = JOptionPane.showInputDialog(this, "Digite o nome do produto para remover:");
+        if (produtoSelecionado != null) {
+            for (int i = 0; i < listaProdutos.size(); i++) {
+                Produto produto = listaProdutos.get(i);
+                if (produto.getDescricao().equals(produtoSelecionado)) {
+                    listaProdutos.remove(i);
+                    salvarProdutos();
+                    JOptionPane.showMessageDialog(this, "Produto removido com sucesso!");
+                    return;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Digite o nome de um produto para remover!");
+        }
+    }
+
+    private void editarProduto() {
+        String produtoSelecionado = JOptionPane.showInputDialog(this, "Digite o nome do produto para editar:");
+        if (produtoSelecionado != null) {
+            for (int i = 0; i < listaProdutos.size(); i++) {
+                Produto produto = listaProdutos.get(i);
+                if (produto.getDescricao().equals(produtoSelecionado)) {
+                    String marca = JOptionPane.showInputDialog(this, "Digite a nova marca:");
+                    String modelo = JOptionPane.showInputDialog(this, "Digite o novo modelo:");
+                    String sistema = JOptionPane.showInputDialog(this, "Digite o novo sistema operacional:");
+                    double preco = Double.parseDouble(JOptionPane.showInputDialog(this, "Digite o novo preço:"));
+
+                    Celular celular = (Celular) produto;
+                    celular.setMarca(marca);
+                    celular.setModelo(modelo);
+                    celular.setSistemaOperacional(sistema);
+                    celular.setPreco(preco);
+
+                    salvarProdutos();
+                    JOptionPane.showMessageDialog(this, "Produto editado com sucesso!");
+                    return;
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Digite o nome de um produto para editar!");
         }
     }
 
