@@ -27,7 +27,7 @@ public class LojaCelulares extends JFrame {
         setLayout(new BorderLayout());
 
         JPanel painelCadastro = new JPanel();
-        painelCadastro.setLayout(new GridLayout(8, 4));
+        painelCadastro.setLayout(new GridLayout(9, 7));
 
         painelCadastro.add(new JLabel("Marca:"));
         marcaTextField = new JTextField();
