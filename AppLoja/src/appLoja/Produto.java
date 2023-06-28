@@ -45,6 +45,8 @@ public abstract class Produto {
         return "Marca: " + marca + "\n" +
                 "Preço: " + preco;
     }
+
+	protected abstract String getModelo();
 }
 
 
