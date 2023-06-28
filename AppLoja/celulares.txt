@@ -1,3 +1,4 @@
-Celular,Samsung ,1200.0,A30,Android
-Celular,Iphone,70000.0,A10,IoS
-Celular,SAmsung,12222.0,s23,andoid
+Celular,Samsung,1800.0,s23,Android
+Celular,Samsung,19000.0,s20 FE,Android
+Celular,Samsung,1800.0,s23,Android
+Celular,Samsung,1800.0,s23,Android

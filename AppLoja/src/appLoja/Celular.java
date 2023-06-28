@@ -10,7 +10,7 @@ public class Celular extends Produto {
         this.sistemaOperacional = sistemaOperacional;
     }
 
-    public String getDescricao() {
+	public String getDescricao() {
         return marca + " " + modelo + " - " + sistemaOperacional + " - R$" + preco;
     }
 
