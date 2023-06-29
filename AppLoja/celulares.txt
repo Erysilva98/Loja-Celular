@@ -1,2 +1,70 @@
-Celular,Moto,1400.0,G9 Plus,Android
-Celular,Poco,1900.0,X5 PRO,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android
+Celular,Samsung,2999.99,Galaxy S21,Android
+Celular,Apple,3999.99,iPhone 12,iOS
+Celular,Xiaomi,2599.99,Mi 11,Android
+Celular,Motorola,999.99,Moto G Power,Android
+Celular,Google,1799.99,Pixel 5,Android
+Celular,OnePlus,2999.99,8 Pro,Android
+Celular,LG,1999.99,Velvet,Android
+Celular,Sony,4499.99,Xperia 1 III,Android
+Celular,Nokia,1499.99,9 PureView,Android
+Celular,Huawei,3899.99,P40 Pro,Android

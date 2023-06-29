@@ -6,7 +6,7 @@ public abstract class Produto {
 	public Celular modelo;
 	public Celular sistemaOperacional;
 
-    public Produto(String marca, double preco) {
+    public Produto(String marca, double preco ) {
         this.marca = marca;
         this.preco = preco;
     }
