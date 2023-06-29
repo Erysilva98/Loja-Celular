@@ -1,7 +1,6 @@
 package appLoja;
 
 public abstract class Produto {
-	private Integer id;
     protected String marca;
     protected double preco;
 	public Celular modelo;
@@ -11,18 +10,8 @@ public abstract class Produto {
         this.marca = marca;
         this.preco = preco;
     }
-    
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
     public abstract String getDescricao();
-
-    // Outros métodos e atributos comuns a todos os produtos
 
     public String getMarca() {
         return marca;
@@ -45,8 +34,6 @@ public abstract class Produto {
         return "Marca: " + marca + "\n" +
                 "Preço: " + preco;
     }
-
-	protected abstract String getModelo();
 }
 
 

@@ -30,8 +30,6 @@ public class Celular extends Produto {
         this.sistemaOperacional = sistemaOperacional;
     }
 
-    // Outros métodos específicos de Celular
-
     @Override
     public String toString() {
         return super.toString() + "\n" +

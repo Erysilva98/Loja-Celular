@@ -21,6 +21,8 @@ public class LojaCelulares extends JFrame {
 
         listaProdutos = new ArrayList<>();
         
+        // Criando Interface
+        
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(800, 600);
         setLayout(new BorderLayout());
