@@ -135,17 +135,46 @@ public class LojaCelulares extends JFrame {
             button.setAlignmentX(Component.CENTER_ALIGNMENT);
             button.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-                    int confirmacao = JOptionPane.showConfirmDialog(null, "Deseja remover este produto?", "Remover Produto", JOptionPane.YES_NO_OPTION);
-                    if (confirmacao == JOptionPane.YES_OPTION) {
-                        removerProduto(produto);
-                        listarProdutos();
+                    String[] options = { "Editar", "Remover", "Cancelar" };
+                    int choice = JOptionPane.showOptionDialog(null, "Selecione uma opção:", "Opções do Produto",
+                            JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
+
+                    switch (choice) {
+                        case 0:
+                            editarProduto(produto);
+                            break;
+                        case 1:
+                            removerProduto(produto);
+                            break;
+                        case 2:
+                            // Cancelar ação, não fazer nada
+                            break;
+                        default:
+                            break;
                     }
+
+                    listarProdutos();
                 }
             });
             listaPanel.add(button);
         }
         listaPanel.revalidate();
         listaPanel.repaint();
+    }
+
+    private void editarProduto(Produto produto) {
+        String marca = JOptionPane.showInputDialog(this, "Digite a nova marca:", produto.getMarca());
+        String modelo = JOptionPane.showInputDialog(this, "Digite o novo modelo:", produto.getModelo());
+        String sistema = JOptionPane.showInputDialog(this, "Digite o novo sistema operacional:", produto.getSistemaOperacional());
+        double preco = Double.parseDouble(JOptionPane.showInputDialog(this, "Digite o novo preço:", produto.getPreco()));
+
+        produto.setMarca(marca);
+        produto.setModelo(modelo);
+        produto.setSistemaOperacional(sistema);
+        produto.setPreco(preco);
+
+        salvarProdutos();
+        JOptionPane.showMessageDialog(this, "Produto editado com sucesso!");
     }
 
     private void removerProduto(Produto produto) {

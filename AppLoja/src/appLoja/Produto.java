@@ -28,12 +28,28 @@ public abstract class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
+    
+    protected abstract Object getModelo();
+    
+	protected abstract void setModelo(String modelo2);
+    
+    protected abstract Object getSistemaOperacional();
+    
+    protected abstract void setSistemaOperacional(String sistema);
 
     @Override
     public String toString() {
         return "Marca: " + marca + "\n" +
                 "Preço: " + preco;
     }
+
+	
+
+
+
+	
+
+	
 }
 
 
